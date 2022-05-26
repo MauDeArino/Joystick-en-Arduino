@@ -1,16 +1,10 @@
 # Joystick en Arduino
-Por Fernanda Monter y Mauricio de Ariño
-
-## Setup del repositorio
-En el repositorio en GitHub del proyecto pueden encontrar:
-- El archivo Practica_joystick.ino (código en Arduino para el joystick),
-- El archivo README.md,
-- La carpeta Imagenes que incluye las fotografías que se encuentran en el README.
+Representación gráfica de valores máximos y mínimos de traslación de un joystick para implementarlo en un control.
 
 ## Información general
 El proyecto consiste en obtener gráficamente los valores máximos y mínimos de traslación de un *joystick* para adaptarlo a un control, además de su valor promedio en reposo. Un joystick es un arreglo de 2 potenciómetros que permite conocer la posición de la palanca en un eje X y un eje Y. Para leer estos valores se conectaron los canales analógicos de los potenciómetros del joystick a un Arduino MEGA y se escribió un programa en el software de Arduino que recibe los valores X y Y y los traduce de un intervalo entre 0 y 1023 a un intervalo entre -1 y 1 para desplegarlos gráficamente.
 
-## Desarrollo
+## Recolección de datos
 Para llevar a cabo la lectura correctamente se escribió un código que toma los valores del X y Y del joystick a traves de entradas analógicas (A0 y A1) y los despliega en una tabla y una gráfica. La conexión del joystick al Arduino se basó en el diagrama de la Imagen 1.
 
 ![Diagrama](https://github.com/fmonter11/Joystick-en-Arduino/blob/main/Imagenes/Diagrama.png)
@@ -31,3 +25,11 @@ Por último, se tradujeron los valores del joystick a un intervalo de -1 a 1 y s
 ![Monitor serial](https://github.com/fmonter11/Joystick-en-Arduino/blob/main/Imagenes/Monitor.png)
 
 *Gráfica 1. Captura del Serial Plotter con gráfica sinusoidal*
+
+El archivo Practica-joystick.ino incluye el código utilizado. 
+
+## Implementación
+Un joystick puede ser implementado en múltiples sistemas electricos que necesiten integrar un componente mecánico que indique dirección en un plano x y. En este caso el enfoque fue un control, pero los joysticks también son utilizados en muchas industrias diferentes, dos usos comunes son la dirección de sillas de ruedas eléctricas y el movimiento de brazos de maquinaria pesada como grúas.
+
+## Contacto
+Fernanda Monter y Mauricio de Ariño
